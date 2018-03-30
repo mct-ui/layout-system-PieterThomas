@@ -162,18 +162,20 @@ a:hover, a:focus {
 */
 
 .o-row {
-    overflow: auto;
+    /* hier padding boven links en rechts, onder niet */
     padding: 24px 24px 0;
+    /* zorgt ervoor dat margin collapsing wordt opgegeven als een element binnen een container margin heeft. */
+    overflow: auto;
 }
 
 .o-row--primary {
-    background-color: #e85c00;
-    color: #FFF;
+    background-color: #e85e00;
+    color: #fff;
 }
 
 .o-row--grey-dark {
     background-color: #111;
-    color: #FFF;
+    color: #fff;
 }
 
 @media (min-width: 768px) {
@@ -190,7 +192,8 @@ a:hover, a:focus {
 
 .o-container {
     max-width: 90em;
-    /* 1440px / 16 = 90 em */
+    /* is 1440px /16 = 90em */
+    /* objecten staan gecentreerd*/
     margin: 0 auto;
 }
 
@@ -203,6 +206,8 @@ a:hover, a:focus {
 */
 
 .o-layout {
+    /*display: -webkit-flex;
+    display: -ms-flexbox;*/
     display: flex;
     flex-wrap: wrap;
 }
@@ -239,7 +244,9 @@ a:hover, a:focus {
 
 /* reverse horizontal row modifier */
 
-.o-layout--row-reverse {}
+.o-layout--row-reverse {
+    flex-direction: row-reverse;
+}
 
 /* Horizontal alignment modifiers*/
 
@@ -349,18 +356,20 @@ a:hover, a:focus {
     Will be mostly used on o-layout__item
 */
 
-.u-width-auto {}
+.u-width-auto {
+    width: auto !important;
+}
 
 .u-1-of-2 {
     width: 50% !important;
 }
 
 .u-1-of-3 {
-    width: 33.33333333333333333% !important;
+    width: 33.333333333% !important
 }
 
 .u-2-of-3 {
-    width: 66.66666666666667% !important;
+    width: 66.6666666666% !important;
 }
 
 .u-1-of-4 {
@@ -388,22 +397,25 @@ a:hover, a:focus {
 }
 
 .u-1-of-6 {
-    width: 16.666666666667% !important;
+    width: 16.66666666666% !important;
 }
 
 .u-5-of-6 {
-    width: 83.3333333333333% !important;
+    width: 83.3333333333%;
 }
 
 @media (min-width: 576px) {
+    .u-width-auto-bp1 {
+        width: auto !important;
+    }
     .u-1-of-2-bp1 {
         width: 50% !important;
     }
     .u-1-of-3-bp1 {
-        width: 33.33333333333333333% !important;
+        width: 33.333333333% !important
     }
     .u-2-of-3-bp1 {
-        width: 66.66666666666667% !important;
+        width: 66.6666666666% !important;
     }
     .u-1-of-4-bp1 {
         width: 25% !important;
@@ -424,22 +436,25 @@ a:hover, a:focus {
         width: 80% !important;
     }
     .u-1-of-6-bp1 {
-        width: 16.666666666667% !important;
+        width: 16.66666666666% !important;
     }
     .u-5-of-6-bp1 {
-        width: 83.3333333333333% !important;
+        width: 83.3333333333%;
     }
 }
 
 @media (min-width: 768px) {
+    .u-width-auto-bp2 {
+        width: auto !important;
+    }
     .u-1-of-2-bp2 {
         width: 50% !important;
     }
     .u-1-of-3-bp2 {
-        width: 33.33333333333333333% !important;
+        width: 33.333333333% !important
     }
     .u-2-of-3-bp2 {
-        width: 66.66666666666667% !important;
+        width: 66.6666666666% !important;
     }
     .u-1-of-4-bp2 {
         width: 25% !important;
@@ -460,22 +475,25 @@ a:hover, a:focus {
         width: 80% !important;
     }
     .u-1-of-6-bp2 {
-        width: 16.666666666667% !important;
+        width: 16.66666666666% !important;
     }
     .u-5-of-6-bp2 {
-        width: 83.3333333333333% !important;
+        width: 83.3333333333%;
     }
 }
 
 @media (min-width: 992px) {
+    .u-width-auto-bp3 {
+        width: auto !important;
+    }
     .u-1-of-2-bp3 {
         width: 50% !important;
     }
     .u-1-of-3-bp3 {
-        width: 33.33333333333333333% !important;
+        width: 33.333333333% !important
     }
     .u-2-of-3-bp3 {
-        width: 66.66666666666667% !important;
+        width: 66.6666666666% !important;
     }
     .u-1-of-4-bp3 {
         width: 25% !important;
@@ -496,22 +514,25 @@ a:hover, a:focus {
         width: 80% !important;
     }
     .u-1-of-6-bp3 {
-        width: 16.666666666667% !important;
+        width: 16.66666666666% !important;
     }
     .u-5-of-6-bp3 {
-        width: 83.3333333333333% !important;
+        width: 83.3333333333%;
     }
 }
 
 @media (min-width: 1200px) {
+    .u-width-auto-bp4 {
+        width: auto !important;
+    }
     .u-1-of-2-bp4 {
         width: 50% !important;
     }
     .u-1-of-3-bp4 {
-        width: 33.33333333333333333% !important;
+        width: 33.333333333% !important
     }
     .u-2-of-3-bp4 {
-        width: 66.66666666666667% !important;
+        width: 66.6666666666% !important;
     }
     .u-1-of-4-bp4 {
         width: 25% !important;
@@ -532,10 +553,10 @@ a:hover, a:focus {
         width: 80% !important;
     }
     .u-1-of-6-bp4 {
-        width: 16.666666666667% !important;
+        width: 16.66666666666% !important;
     }
     .u-5-of-6-bp4 {
-        width: 83.3333333333333% !important;
+        width: 83.3333333333%;
     }
 }
 
